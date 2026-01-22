@@ -28,7 +28,8 @@ class BookingRequest extends FormRequest
     {
         return [
             'email' => 'required|email',
-            'booking_date' => 'required|date'
+            'booking_date' => 'required|date',
+            'status' => 'required|in:pending,confirmed,cancelled',
         ];
     }
 }
